@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class EmailValidation {
+
+	public static void main(String[] args) {
+
+		List<String> list = new ArrayList<>();
+		list.add("abc@abc.com");
+		list.add("abc@def.com");
+		list.add("sunil@abc.com");
+		System.out.println(list);
+		
+		Pattern pattern = Pattern.compile("^[a-zA-Z0-9_.-]+@[a-zA-Z0-9_.-]+$");
+		for (String string : list) {
+			Matcher matcher = pattern.matcher(string);	
+			System.out.println(list +" : "+ matcher.matches());
+		}
+		
+		
+		String searchEmail = null;
+		System.out.println("Search the email id");
+		Scanner sc = new Scanner(System.in);
+		searchEmail  = sc.nextLine();
+		
+		if(searchEmail == null) {
+			System.out.println("Please enter the emailid");
+			return ;
+		}else {
+		for(int i = 0; i < list.size(); i++) {
+			
+			if(searchEmail == list.get(i)) {
+				System.out.println("Email id: " + searchEmail);
+			}
+		}
+		}
+		
+		
+	}
+
+}

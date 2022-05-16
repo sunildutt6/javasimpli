@@ -1,0 +1,10 @@
+package com.trycatch;
+
+public class ExampleTryCatch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

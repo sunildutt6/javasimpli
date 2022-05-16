@@ -1,0 +1,35 @@
+package com.trycatch;
+
+import java.util.Scanner;
+
+class UnderAgeException extends Exception {
+	public String toString() {
+		return "Age is less than 18";
+	}
+}
+
+class OverAgeException extends Exception {
+
+	public String toString() {
+		return "Age is more than 65";
+	}
+}
+
+class CheckAge {
+	int age;
+
+	void collectAge() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your age");
+		age = sc.nextInt();
+
+	}
+}
+
+public class ExampleTryCatch {
+
+	public static void main(String[] args) {
+
+	}
+
+}

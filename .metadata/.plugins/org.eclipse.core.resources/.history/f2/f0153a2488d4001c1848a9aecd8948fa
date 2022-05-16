@@ -1,0 +1,19 @@
+package com.sunil.filehandling;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class FileCreationDemo2 {
+
+	public static void main(String[] args) throws IOException {
+
+		createFileIn_NIO();
+	}
+	
+	private static void createFileIn_NIO() throws IOException {
+		String data = "This file is created with file not input output class.";
+		Files.write(Paths.get("e://Files//txtfile2.txt"),data.getBytes());
+	}
+
+}

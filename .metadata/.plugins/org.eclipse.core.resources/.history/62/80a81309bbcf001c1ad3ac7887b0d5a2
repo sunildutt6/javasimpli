@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class EmailValidation {
+
+	public static void main(String[] args) {
+
+		List<String> emails = new ArrayList<>();
+		emails.add("abcd@def.com");
+		emails.add("def@def.com");
+		
+		System.out.println(emails);
+		Pattern patter = Pattern.compile("^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+$");
+		for (String string : emails) {
+			Matcher matcher = Pattern.matcher(email);
+			System.out.println("Email:  " + matcher.matches());
+		}
+		
+	}
+
+}

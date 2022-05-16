@@ -1,0 +1,103 @@
+package com.trycatch;
+
+import java.util.Scanner;
+
+class InvalidCustomerException extends Exception {
+	public String toString() {
+		return "Invalid Customer";
+	}
+}
+
+class UnderAgeException extends Exception{
+	public String toString() {
+		return "Age is below 18";
+	}
+}
+
+class OverAgeException extends Exception{
+	public String toString() {
+		return "Age is over 65";
+		}
+}
+
+class Customer {
+	int accno = 111;
+	int pin = 234;
+	int age = 19;
+	
+	int accno1;
+	int pin1;
+	int age1;
+
+	void collectData() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the accno:");
+		accno1 = sc.nextInt();
+		System.out.println("Enter the pin:");
+		pin1 = sc.nextInt();
+		System.out.println("Enter your age: ");
+		age1 = sc.nextInt();
+	}
+
+	void verify() throws InvalidCustomerException {
+		if (accno == accno1 && pin == pin1) {
+			System.out.println("Valid Customer");
+		} else {
+			InvalidCustomerException ice = new InvalidCustomerException();
+			System.out.println(ice.toString());
+			throw ice;
+		}
+	}
+	
+	void ageverify() throws UnderAgeException{
+		if(age > age1) {
+			System.out.println("Give the license");
+		}else {
+			UnderAgeException uae = new UnderAgeException();
+			throw uae;
+		}
+	}
+	
+	void ageVerify1()throws OverAgeException{
+		if(age < age1) {
+			System.out.println("give the license");
+		}else {
+			OverAgeException oae = new OverAgeException();
+			throw oae;
+		}
+	}
+}
+
+class Bank {
+	void customerCheck()  {
+		Customer c1 = new Customer();
+		c1.collectData();
+		try {
+			c1.verify();
+		} catch (InvalidCustomerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			c1.ageverify();
+		} catch (UnderAgeException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			c1.ageVerify1();
+		} catch (OverAgeException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
+
+public class MyClass {
+
+	public static void main(String[] args) {
+		Bank b = new Bank();
+		b.customerCheck();
+	}
+
+}

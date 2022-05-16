@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class EmailValidation {
+
+	public static void main(String[] args) {
+
+		List<String> list = new ArrayList<>();
+		list.add("abc@abc.com");
+		list.add("abc@def.com");
+		list.add("sunil@abc.com");
+		System.out.println(list);
+	}
+
+}

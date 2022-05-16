@@ -1,0 +1,22 @@
+package com.sunil.filehandling.filereader;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class FileReaderDemo {
+
+	public static void main(String[] args) throws IOException {
+
+		FileInputStream fis = new FileInputStream("e://files/txtfile3.txt");
+		
+		int i;
+		while((i = fis.read()) != -1) {
+			System.out.print(i);
+		}
+		fis.close();
+		
+	}
+	
+
+}

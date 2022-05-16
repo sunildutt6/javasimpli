@@ -1,0 +1,10 @@
+package com.sunil.filehandling;
+
+public class FileCreationDemo1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

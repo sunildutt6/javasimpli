@@ -1,0 +1,15 @@
+import java.io.BufferedReader;
+
+public class FileModifyDemo {
+
+	public static void main(String[] args) {
+
+	}
+	
+	public static void modifyFile(String filePath, String oldString, String newString) {
+		BufferedReader bfr = null;
+		
+		bfr = new BufferedReader(new FileReader(new File("e://files//txtfile2.txt")));
+	}
+
+}

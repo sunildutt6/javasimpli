@@ -1,0 +1,22 @@
+class Operations{
+	void add() {
+		System.out.println("Addition is executed");
+	}
+	void sub() {
+		System.out.println("subtraction is executed");
+	}
+	void mul() {
+		System.out.println("Multiplication is executed");
+	}
+	void div() {
+		System.out.println("Division is executed");
+	}
+}
+
+
+public class ThreadDemo {
+
+	public static void main(String[] args) {
+		
+	}
+}
