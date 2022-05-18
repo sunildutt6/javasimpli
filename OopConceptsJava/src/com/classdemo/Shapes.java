@@ -12,6 +12,14 @@ abstract class Shapes {
 
 }
 
+class Geometry{
+	void usage(Shapes s) {
+		s.getData();
+		s.calculate();
+		s.display();
+	}
+}
+
 class Circle extends Shapes{
 	float r;
 	float pi = 3.147f;
@@ -37,7 +45,6 @@ class Rectangle extends Shapes{
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the length");
 		l = sc.nextFloat();
-		
 		System.out.println("Enter the breadth");
 		b = sc.nextFloat();
 		
