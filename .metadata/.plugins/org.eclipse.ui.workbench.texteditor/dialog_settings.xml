@@ -6,7 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
+		<item key="selection" value="int a = 10;"/>
 		<list key="findhistory">
+			<item value="int a = 10;"/>
 			<item value="class Warrior {"/>
 		</list>
 		<list key="replacehistory">
